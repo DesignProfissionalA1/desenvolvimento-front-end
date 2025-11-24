@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }  
+    
+    h1 {
+        color: #811212;
+    }
+
+</style>
+</html>
+<h1>Calculadora de IMC</h1>
+<p>IMC significa Índice de Massa Corporal e é uma medida utilizada para avaliar se uma pessoa está dentro do peso ideal em relação à sua altura.
+</p>
+
+<body>
+
+    <script>
+        
+        // capturando as informações do usuário
+        let nome = prompt("Qual é o seu nome?");
+        alert("Olá, " + nome + "! Seja bem-vindo(a)!");
+        let peso = parseFloat(prompt("Digite seu peso em kg:"));
+        let altura = parseFloat(prompt("Digite sua altura em metros:"));
+
+        // função calcular IMC
+
+        function calcularIMC(peso, altura) {
+            return peso / (altura * altura);
+        }
+         // faixa de IMC
+
+        let imc = calcularIMC(peso, altura);
+        let faixa;
+        if (imc < 18.5) {
+            faixa = "Abaixo do peso";
+        } else if (imc >= 18.5 && imc < 24.9) {
+            faixa = "Peso normal";
+        } else if (imc >= 25 && imc < 29.9) {
+            faixa = "Sobrepeso";
+        } else {
+            faixa = "Obesidade";
+        }
+        //classificação
+        alert("Seu IMC é: " + imc.toFixed(2) + " (" + faixa + ")");
+        document.write("<h1>Seu IMC é: " + imc.toFixed(2) + " (" + faixa + ")</h1>");
+       
+
+
+
+    </script>
+
+    
+</body>
+</html>

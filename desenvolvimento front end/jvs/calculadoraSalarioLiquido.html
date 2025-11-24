@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de Salário</title>
+
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #4CAF50;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, select {
+    margin-top: 5px;
+    padding: 5px;
+    width: 200px;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .valor {
+    font-weight: bold;
+    color: #333;
+  }
+</style>
+<body>
+  <h1>Cadastro de Funcionário e Cálculo do Salário</h1>
+  
+  <form id="Funcionario">
+    <label>Nome:</label>
+    <input type="text" id="nome" required>
+<br>
+    <label>Endereço:</label>
+    <input type="text" id="endereco" required>
+<br>
+    <label>Sexo:</label>
+    <select id="sexo" required>
+      <option value="">Selecione...</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Feminino">Feminino</option>
+      <option value="Outro">Outro</option>
+    </select>
+<br>
+    <label>Cidade:</label>
+    <input type="text" id="cidade" required>
+<br>
+    <label>Estado:</label>
+    <input type="text" id="estado" required>
+<br>
+    <label>Idade:</label>
+    <input type="number" id="idade" required min="16">
+<br>
+    <label>Salário Bruto (R$):</label>
+    <input type="number" id="salarioBruto" required min="0" step="0.01">
+<br>
+    <button type="button" onclick="calcularSalario()">Calcular Salário Líquido</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcularSalario() {
+      // Coleta dos dados
+      const nome = document.getElementById("nome").value;
+      const endereco = document.getElementById("endereco").value;
+      const sexo = document.getElementById("sexo").value;
+      const cidade = document.getElementById("cidade").value;
+      const estado = document.getElementById("estado").value;
+      const idade = document.getElementById("idade").value;
+      const salarioBruto = parseFloat(document.getElementById("salarioBruto").value);
+
+      
+      if (!nome || !endereco || !sexo || !cidade || !estado || !idade || isNaN(salarioBruto)) {
+        alert("Por favor, preencha todos os campos corretamente!");
+        return;
+      }
+
+      // Cálculo dos descontos
+      const descVT = salarioBruto * 0.02;  // Vale Transporte
+      const descVA = salarioBruto * 0.05;  // Vale Alimentação
+      const descPS = salarioBruto * 0.10;  // Plano de Saúde
+      const totalDescontos = descVT + descVA + descPS;
+
+      const salarioLiquido = salarioBruto - totalDescontos;
+
+      // Exibição dos resultados
+      const resultadoDiv = document.getElementById("resultado");
+      resultadoDiv.innerHTML = `
+        <p><strong>Nome:</strong> ${nome}</p>
+        <p><strong>Salário Bruto:</strong> R$ ${salarioBruto.toFixed(2)}</p>
+        <p><strong>Total de Descontos:</strong> R$ ${totalDescontos.toFixed(2)}</p>
+        <p class="valor"><strong>Salário Líquido:</strong> R$ ${salarioLiquido.toFixed(2)}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

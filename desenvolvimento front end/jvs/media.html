@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Solicitar o nome do usuário e exibir uma mensagem de boas-vindas
+        let nome = prompt("Qual é o seu nome?");
+        alert("Olá, " + nome + "! seja bem-vindo(a)!");
+
+        // solicitar duas notas e exibir a média e informar se o aluno foi aprovado ou reprovado 
+        let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+        let media = (nota1 + nota2) / 2;
+
+        if (media >= 6) {
+            alert("Parabéns " + nome + ", você foi aprovado(a)!");
+        } else {
+            alert("Que pena " + nome + ", você foi reprovado(a).");
+        }
+        alert("Sua média é: " + media.toFixed(2));
+        document.write("<h1>Bem-vindo(a), " + nome + "!</h1>");
+        document.write("<p>Sua média é: " + media.toFixed(2) + "</p>");
+    </script>
+</body>
+</html>

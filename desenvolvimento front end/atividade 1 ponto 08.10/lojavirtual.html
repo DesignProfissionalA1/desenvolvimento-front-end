@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Store</title>
+  <style>
+    /* Reset e estilo base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, #fdd2fc, #e1a0ca);
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Conteúdo principal */
+    main {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: #cd0692;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+      color: #df81d3;
+    }
+
+    /* Produtos */
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .produto {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(247, 155, 230, 0.711);
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .produto h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .produto p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .produto button {
+      background-color: #db6ed7;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .produto button:hover {
+      background-color: #c70bc0;
+    }
+
+    /* Formulário de contato */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      margin-top: 10px;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    input, textarea {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    form button {
+      margin-top: 15px;
+      background-color: #c057ab;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #e907da;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Tech Store</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo à Tech Store</h2>
+      <p>A melhor loja virtual de tecnologia com produtos de ponta e ofertas exclusivas.</p>
+    </section>
+
+    <section id="produtos">
+      <h2>Produtos</h2>
+      <div class="produtos-grid">
+        <div class="produto">
+            <img src="samsung galaxy s21.jpg" alt="Smartphone Samsung Galaxy S21">
+          <h3>Smartphone Samsung Galaxy S21</h3>
+          <p>Processador ultrarrápido, câmera de alta resolução e bateria de longa duração.</p>
+          <p><strong>Preço: R$ 1.999,00</strong></p>
+          <button>Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="notebook-asus-vivobook.jpg" alt="Laptop Asus Vivobook">
+          <h3>Laptop Asus Vivobook</h3>
+          <p>Leve, potente e ideal para trabalho, estudo e entretenimento.</p>
+          <p><strong>Preço: R$ 3.499,00</strong></p>
+          <button>Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="jbl.wave.jpg" alt="jbl.wave.jpg">
+          <h3>Fone Bluetooth JBL WAVE PRO</h3>
+          <p>Qualidade de som excepcional e cancelamento de ruído ativo.</p>
+          <p><strong>Preço: R$ 499,00</strong></p>
+          <button>Comprar</button>
+        </div>
+      
+    <div class="produto">
+        <img src="smartwatch-apple.jpg" alt="Smartwatch Apple Watch Series 6">
+      <h3>Smartwatch Apple Watch Series 6</h3>
+      <p>Monitore sua saúde, receba notificações e fique conectado o dia todo.</p>
+      <p><strong>Preço: R$ 2.999,00</strong></p>
+      <button>Comprar</button>
+    </section>
+    </div>
+
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>Na <strong>Tech Store</strong>, acreditamos que tecnologia deve facilitar sua vida. Trabalhamos com as melhores marcas e garantimos qualidade, segurança e atendimento de excelência.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Contato: suporte@techstore.com</p>
+    <p>Telefone: (61) 4002-8922</p>
+    <p>Endereço: Rua da Tecnologia, 123 - São Paulo, SP</p>
+    <p>CNPJ: 12.345.678/0001-90</p>
+    <p>Redes Sociais:
+      <a href="#" style="color: #851f55; text-decoration: underline;">Facebook</a> |
+      <a href="#" style="color: #851f55; text-decoration: underline;">Instagram</a> |
+      <a href="#" style="color: #851f55; text-decoration: underline;">Twitter</a>
+    </p>
+    <p>&copy; 2025 Tech Store. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

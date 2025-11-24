@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Trainer Virtual</title>
+  <style>
+    
+
+
+    header {
+  background: linear-gradient(to right, #fbc2eb, #f9c5d1);
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-img {
+  max-width: 15%;
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(186, 104, 200, 0.3);
+}
+   
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fef6fb;
+      color: #444;
+    }
+
+    nav {
+      background: linear-gradient(to right, #f9c5d1, #fbc2eb);
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #d81b60;
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #7b1fa2;
+      margin-top: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    section {
+      padding: 30px 10%;
+      background-color: #ffffff;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff0f6;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th {
+      background-color: #f8bbd0;
+      color: #4a148c;
+      padding: 12px;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #f3e5f5;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input, button {
+      padding: 10px;
+      border: 1px solid #e1bee7;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #ba68c8;
+      box-shadow: 0 0 5px #ce93d8;
+    }
+
+    button {
+      background-color: #ce93d8;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ab47bc;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.1em;
+      color: #6a1b9a;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 20px;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!--imagem baner-->
+    <header>
+  <img src="bannerprojeto.png" alt="Banner Personal Trainer Virtual" class="banner-img" />
+</header>
+    <!-- navegação -->
+  <nav>
+    <ul>
+      <li><a href="#apresentacao">Apresentação</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="calculadoraIMC.html">Calculadora de IMC</a></li>
+      <li><a href="#inscricao">Inscrição</a></li>
+    
+    </ul>
+  </nav>
+<!-- conteúdo principal -->
+  <main>
+  <section id="apresentacao">
+    <h1>Personal Trainer Virtual</h1>
+    <p>Bem-vindo ao seu Personal Trainer Virtual! Aqui você encontrará tudo o que precisa para alcançar seus objetivos de fitness com a ajuda da tecnologia.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <ul>
+      <li>Planos de Treinamento Personalizados</li>
+      <li>Acompanhamento Nutricional</li>
+      <li>Consultas Online com Especialistas</li>
+      <li>Vídeos de Exercícios e Dicas de Saúde</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Serviço</th>
+        <th>Descrição</th>
+        <th>Valor (R$)</th>
+      </tr>
+      <tr>
+        <td>Plano de Treinamento Personalizado</td>
+        <td>Elaboração de um plano de treino adaptado às suas necessidades e objetivos.</td>
+        <td>150,00</td>
+      </tr>
+      <tr>
+        <td>Acompanhamento Nutricional</td>
+        <td>Consultas com nutricionista para orientar sua alimentação.</td>
+        <td>200,00</td>
+      </tr>
+      <tr>
+        <td>Consultas Online com Especialistas</td>
+        <td>Sessões virtuais com personal trainers e outros profissionais de saúde.</td>
+        <td>100,00 por sessão</td>
+      </tr>
+      <tr>
+        <td>Vídeos de Exercícios e Dicas de Saúde</td>
+        <td>Acesso a uma biblioteca de vídeos educativos e motivacionais.</td>
+        <td>Gratuito</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="imcCalculator">
+    <h2>Calculadora de IMC</h2>
+    <form id="imcForm">
+      <label>Nome completo</label>
+      <input type="text" id="nome" required />
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" required />
+      <label for="altura">Altura (m):</label>
+      <input type="number" id="altura" step="0.01" required />
+      <button id="calcularIMC">Calcular IMC</button>
+    </form>
+    <div id="resultado"></div>
+  </section>
+
+  <!--formulario de inscrição-->
+  <section id="inscricao">
+    <h2>Inscreva-se para uma Avaliação Gratuita</h2>
+    <form id="inscricaoForm">
+      <label>Nome completo</label>
+      <input type="text" id="nomeInscricao" required />
+      <label>Email</label>
+      <input type="email" id="emailInscricao" required />
+      <label>Telefone</label>
+      <input type="tel" id="telefoneInscricao" required />
+      <button id="enviarInscricao">Enviar Inscrição</button>
+    </form>
+    </section>
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato conosco para mais informações ou para agendar uma consulta:</p>
+    <ul>
+      <li>Email: seuPersonalVirtual@gmail.com</li>
+      <li>Telefone: (61) 98765-4321</li>
+    </ul>
+  </section>
+    </main>
+    <footer>
+      <p>&copy; Projeto final desenvolvimento front end. by: Paola Victoria</p>
+      
+    </footer>
+
+  <script>
+    document.getElementById('imcForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let peso = parseFloat(document.getElementById('peso').value);
+      let altura = parseFloat(document.getElementById('altura').value);
+      let nome = document.getElementById('nome').value;
+
+      function calcularIMC(peso, altura) {
+        return peso / (altura * altura);
+      }
+
+      let imc = calcularIMC(peso, altura);
+      let faixa;
+
+      if (imc < 18.5) {
+        faixa = "Abaixo do peso";
+      } else if (imc >= 18.5 && imc < 24.9) {
+        faixa = "Peso normal";
+      } else if (imc >= 25 && imc < 29.9) {
+        faixa = "Sobrepeso";
+      } else {
+        faixa = "Obesidade";
+      }
+
+      document.getElementById('resultado').innerHTML =
+        "<h3>Seu IMC é: " + imc.toFixed(2) + " (" + faixa + ")</h3>" +
+        "<p>Obrigado, " + nome + ", por usar nossa calculadora de IMC!</p>";
+   
+
+    //recomendações baseadas no IMC
+        let recomendacao = "";
+        if (imc < 18.5) {
+            recomendacao = "<p>Recomendamos acompanhamento nutricional para ajudar a alcançar um peso saudável.</p>";
+        } else if (imc >= 25) {
+            recomendacao = "<p>Recomendamos um plano de treinamento personalizado e acompanhamento nutricional para melhorar sua saúde.</p>";
+        } else {
+            recomendacao = "<p>Parabéns! Continue assim e confira nossos vídeos de exercícios para manter sua forma física.</p>";
+        }
+    
+        document.getElementById('resultado').innerHTML += recomendacao;
+        
+        //façar o scroll automático até o resultado
+        document.getElementById('resultado').scrollIntoView({ behavior: 'smooth' });
+  
+        // limpar os campos do formulário após o cálculo
+        document.getElementById('imcForm').reset();
+
+        // formulário de inscrição
+        document.getElementById('inscricaoForm').addEventListener('submit', function(event) {
+
+            event.preventDefault();
+
+            let nomeInscricao = document.getElementById('nomeInscricao').value;
+            let telefoneInscricao = document.getElementById('telefoneInscricao').value;
+            let emailInscricao = document.getElementById('emailInscricao').value;
+
+            alert("Obrigado, " + nomeInscricao + "! Sua inscrição foi recebida. Entraremos em contato pelo email: " + emailInscricao);
+
+            // limpar os campos do formulário de inscrição após o envio
+
+            document.getElementById('inscricaoForm').reset();
+        // mostrar a confirmação de inscrição
+        alert("Inscrição realizada com sucesso!");
+    });
+    });
+  </script>
+  </body>
+  </html>
+  

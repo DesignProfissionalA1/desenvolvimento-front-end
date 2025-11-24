@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // solicitar nome do usuário e exibir mensagem de boas-vindas
+        let nome = prompt("Qual é o seu nome?");
+        alert("Olá, " + nome + "! seja bem-vindo(a)!");
+
+        // solicitar temperatura em graus Celsius e converter para Fahrenheit
+        let celsius = parseFloat(prompt("Digite a temperatura em graus Celsius:"));
+        let fahrenheit = ((celsius * 9/5) + 32);
+        alert("A temperatura em graus Fahrenheit é: " + fahrenheit.toFixed(2));
+        document.write("<h1>Bem-vindo(a), " + nome + "!</h1>");
+        document.write("<p>A temperatura em graus Fahrenheit é: " + fahrenheit.toFixed(2) + "</p>");
+    </script>
+</body>
+</html>

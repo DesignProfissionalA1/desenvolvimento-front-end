@@ -1,0 +1,101 @@
+<!DOCTYPE html>     
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RESTAURANTE OH AE SUN</title>
+</head>
+<body>
+<!-- cabeçalho-->
+    <header>
+        <h1> restaurante coreano oh ae sun</h1>
+        <img src="Bon-Appetit-Your-Majesty-poster.jpg" alt="banner restaurante coreano oh ae sun">
+ width="100%" height="300px"
+    </header>
+<!-- menu de navegação-->
+<nav>
+    <ul>
+        <li><a href="#cardapio">cardapio</a></li>
+        <li><a href="#video">video</a></li>
+        <li><a href="#reserva">reserva</a></li>
+        <li><a href="#localização">localização</a></li>
+    </ul>
+</nav>
+<!--conteudo principal-->
+<main>
+    <section id="cardapio">
+        <h2>cardapio</h2>
+        <p>oferecemos pratos tradicionais coreanos, como bibimbap, bulgogi e kimchi, preparados com ingredientes frescos e autênticos.</p>
+        
+        <!--tabela-->
+        <table border="1">
+            <tr>
+                <th>Prato</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>Bibimbap</td>
+                <td>Arroz misturado com vegetais, carne e ovo frito.</td>
+                <td>R$ 37,00</td>
+            </tr>
+            <tr>
+                <td>Bulgogi</td>
+                <td>Carne marinada grelhada servida com arroz e acompanhamentos.</td>
+                <td>R$ 43,99</td>
+            </tr>
+            <tr>
+                <td>Kimchi</td>
+                <td>Repolho fermentado picante, acompanhamento tradicional coreano.</td>
+                <td>R$ 14,99</td>
+            </tr>
+        </table>
+    </section>
+
+    <!--video-->
+    <section id="video">
+        <h2>video</h2>
+        <p> assista o video sobre nossa tradcional culinaria coreana</p>
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/qEtFNbdKPhM?si=FyjqVdavhQxfcrHQ" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <!--formulario-->
+    <section id="reserva">
+        <h2> faça sua reserva conosco </h2>
+        <form action="processar_reserva.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="pessoas">Número de pessoas:</label>
+            <input type="number" id="pessoas" name="pessoas" required>
+
+            <input type="submit" value="Reservar">
+        </form>
+    </section>
+    <!--PDF-->
+    <section id="pdf">
+        <h2>Cardápio em PDF</h2>
+        <p>Baixe nosso cardápio completo em PDF:</p>
+        <embed src="cardapio_restaurante_oh_ae_sun.pdf" type="application/pdf" width="600" height="400">
+            <p>Seu navegador não suporta PDFs. <a href="cardapio_restaurante_oh_ae_sun.pdf">Clique aqui para baixar o PDF.</a></p>
+    </section>
+</main>
+<!--conteudo lateral-->
+<aside>
+    <h2>Curiosidade</h2>
+    <p>"voce sabia que o **kimchi** é considerado patrimonio imaterial da humanidade pela UNESCO?"</p>
+    <p>"Ambiente acolhedor e pratos deliciosos." - Outro Cliente Satisfeito</p>
+</aside>
+<!--rodapé-->
+<footer>
+    <p>&copy; 2024 Restaurante Oh Ae Sun. Todos os direitos reservados.</p>
+    <p>Endereço: Rua da Culinária, 123, W3sul Brasília DF, SP</p>
+    <p>Telefone: (61) 4002-8922 | Email: vovoohesun@ohaesun.com.br</p>
+</footer>
+</body>
+</html>
